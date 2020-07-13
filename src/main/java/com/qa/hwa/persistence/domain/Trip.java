@@ -1,4 +1,4 @@
-package com.example.demo.persistence.domain;
+package com.qa.hwa.persistence.domain;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.demo.exceptions;
+package com.qa.hwa.exceptions;
 
 import javax.persistence.EntityNotFoundException;
 

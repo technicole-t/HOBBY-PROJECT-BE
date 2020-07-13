@@ -1,14 +1,14 @@
-package com.example.demo;
+package com.qa.hwa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class HWARunner {
 
 	public static void main(String[] args) {
 		// ApplicationContext beanBag = 
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(HWARunner.class, args);
 	
 //		JourneyRepo journeyDao = beanBag.getBean(JourneyRepo.class);
 //		journeyDao.save(new Journey(0L, "Gatwick", "Bangkok", "Plane", LocalDate.of(2020, 9, 22)));

@@ -1,4 +1,4 @@
-package com.example.demo.rest;
+package com.qa.hwa.rest;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.dto.TripDTO;
-import com.example.demo.persistence.domain.Trip;
-import com.example.demo.service.TripService;
+import com.qa.hwa.dto.TripDTO;
+import com.qa.hwa.persistence.domain.Trip;
+import com.qa.hwa.service.TripService;
 
 @CrossOrigin
 @RestController

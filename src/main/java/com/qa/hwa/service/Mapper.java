@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.qa.hwa.service;
 
 public interface Mapper<Source, Target> {
 	

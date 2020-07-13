@@ -21,9 +21,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.demo.dto.JourneyDTO;
-import com.example.demo.persistence.domain.Journey;
-import com.example.demo.service.JourneyService;
+import com.qa.hwa.dto.JourneyDTO;
+import com.qa.hwa.persistence.domain.Journey;
+import com.qa.hwa.rest.JourneyController;
+import com.qa.hwa.service.JourneyService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JourneyControllerUnitTest {
