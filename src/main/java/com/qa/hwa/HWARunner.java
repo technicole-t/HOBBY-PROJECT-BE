@@ -7,17 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HWARunner {
 
 	public static void main(String[] args) {
-		// ApplicationContext beanBag = 
 		SpringApplication.run(HWARunner.class, args);
-	
-//		JourneyRepo journeyDao = beanBag.getBean(JourneyRepo.class);
-//		journeyDao.save(new Journey(0L, "Gatwick", "Bangkok", "Plane", LocalDate.of(2020, 9, 22)));
-//		System.out.println(journeyDao.findByDepartureAirport("Gatwick"));
-//	
-//		TripRepo tripDao = beanBag.getBean(TripRepo.class);
-//		tripDao.save(new Trip(0L, "Thailand"));
-//		System.out.println(tripDao.findByTripName("Thailand"));
-	
 	
 	}
 
