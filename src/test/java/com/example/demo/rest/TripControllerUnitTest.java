@@ -20,9 +20,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.demo.dto.TripDTO;
-import com.example.demo.persistence.domain.Trip;
-import com.example.demo.service.TripService;
+import com.qa.hwa.dto.TripDTO;
+import com.qa.hwa.persistence.domain.Trip;
+import com.qa.hwa.rest.TripController;
+import com.qa.hwa.service.TripService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TripControllerUnitTest {

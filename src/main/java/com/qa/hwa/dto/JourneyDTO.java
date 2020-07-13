@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.qa.hwa.dto;
 
 import java.time.LocalDate;
 

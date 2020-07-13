@@ -15,8 +15,8 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import com.example.demo.persistence.domain.Trip;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.qa.hwa.persistence.domain.Trip;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)

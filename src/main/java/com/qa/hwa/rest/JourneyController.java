@@ -1,4 +1,4 @@
-package com.example.demo.rest;
+package com.qa.hwa.rest;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.dto.JourneyDTO;
-import com.example.demo.persistence.domain.Journey;
-import com.example.demo.service.JourneyService;
+import com.qa.hwa.dto.JourneyDTO;
+import com.qa.hwa.persistence.domain.Journey;
+import com.qa.hwa.service.JourneyService;
 
 @CrossOrigin
 @RestController

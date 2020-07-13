@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.qa.hwa.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.TripDTO;
-import com.example.demo.persistence.domain.Trip;
-import com.example.demo.persistence.repo.TripRepo;
+import com.qa.hwa.dto.TripDTO;
+import com.qa.hwa.persistence.domain.Trip;
+import com.qa.hwa.persistence.repo.TripRepo;
 
 @Service
 public class TripService {

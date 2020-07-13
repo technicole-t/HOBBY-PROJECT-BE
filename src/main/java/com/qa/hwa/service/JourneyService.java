@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.qa.hwa.service;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.JourneyDTO;
-import com.example.demo.exceptions.JourneyNotFoundException;
-import com.example.demo.persistence.domain.Journey;
-import com.example.demo.persistence.repo.JourneyRepo;
+import com.qa.hwa.dto.JourneyDTO;
+import com.qa.hwa.exceptions.JourneyNotFoundException;
+import com.qa.hwa.persistence.domain.Journey;
+import com.qa.hwa.persistence.repo.JourneyRepo;
 
 @Service
 public class JourneyService {

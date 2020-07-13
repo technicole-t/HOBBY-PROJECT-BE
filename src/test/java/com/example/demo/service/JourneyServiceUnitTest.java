@@ -19,9 +19,10 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.modelmapper.ModelMapper;
 
-import com.example.demo.dto.JourneyDTO;
-import com.example.demo.persistence.domain.Journey;
-import com.example.demo.persistence.repo.JourneyRepo;
+import com.qa.hwa.dto.JourneyDTO;
+import com.qa.hwa.persistence.domain.Journey;
+import com.qa.hwa.persistence.repo.JourneyRepo;
+import com.qa.hwa.service.JourneyService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JourneyServiceUnitTest {

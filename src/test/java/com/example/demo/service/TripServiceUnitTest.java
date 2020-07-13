@@ -17,9 +17,10 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.modelmapper.ModelMapper;
 
-import com.example.demo.dto.TripDTO;
-import com.example.demo.persistence.domain.Trip;
-import com.example.demo.persistence.repo.TripRepo;
+import com.qa.hwa.dto.TripDTO;
+import com.qa.hwa.persistence.domain.Trip;
+import com.qa.hwa.persistence.repo.TripRepo;
+import com.qa.hwa.service.TripService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TripServiceUnitTest {
