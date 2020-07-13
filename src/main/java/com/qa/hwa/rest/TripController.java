@@ -17,7 +17,6 @@ import com.qa.hwa.service.TripService;
 
 @CrossOrigin
 @RestController
-//@RequestMapping("/trip")
 public class TripController {
 
 	private TripService service; 
@@ -28,13 +27,11 @@ public class TripController {
 		this.service = service;
 	} 
 	
-	// WORKING!!
 	@PostMapping("/createTrip")
 	public ResponseEntity<TripDTO> create(@RequestBody Trip trip) {
 		return new ResponseEntity<TripDTO>(this.service.create(trip), HttpStatus.CREATED);
 	}
 	
-	// WORKING!!
 	@GetMapping("/getTrips")
 	public ResponseEntity<List<TripDTO>> get(){
 		return new ResponseEntity<List<TripDTO>>(this.service.read(), HttpStatus.OK);
