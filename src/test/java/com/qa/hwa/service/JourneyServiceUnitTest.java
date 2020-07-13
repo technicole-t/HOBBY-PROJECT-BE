@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.qa.hwa.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -22,7 +22,6 @@ import org.modelmapper.ModelMapper;
 import com.qa.hwa.dto.JourneyDTO;
 import com.qa.hwa.persistence.domain.Journey;
 import com.qa.hwa.persistence.repo.JourneyRepo;
-import com.qa.hwa.service.JourneyService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JourneyServiceUnitTest {
