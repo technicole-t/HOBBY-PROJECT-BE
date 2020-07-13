@@ -1,7 +1,7 @@
 package com.example.demo.rest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -95,6 +95,18 @@ public class JourneyControllerUnitTest {
 		verify(this.service, times(1)).delete(id);
 	}
 	
+	@Test
+	public void updateJourney() {
+		Journey newJourney = new Journey(1L, "Miami", "Dubai", "Plane", LocalDate.of(2022, 12, 20));
+		Journey updatedJourney = new Journey(newJourney.getId(), newJourney.getDepartureAirport(), newJourney.getDestinationAirport(), newJourney.getModeOfTravel(), newJourney.getDate());
+		updatedJourney.setId(id);
+		
+		when(this.service.update(newJourney, this.id)).thenReturn(this.mapToDTO(updatedJourney));
+		
+		assertEquals(new ResponseEntity<JourneyDTO>(this.mapToDTO(updatedJourney), HttpStatus.ACCEPTED), this.controller.updateJourney(newJourney, this.id));
+		
+		verify(this.service, times(1)).update(newJourney, this.id);
+	}
 	// do update test 
 
 }
