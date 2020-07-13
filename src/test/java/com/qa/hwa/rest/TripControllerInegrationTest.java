@@ -1,6 +1,4 @@
-package com.example.demo.rest;
-
-import java.time.LocalDate;
+package com.qa.hwa.rest;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,42 +16,41 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qa.hwa.persistence.domain.Journey;
+import com.qa.hwa.persistence.domain.Trip;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class JourneyControllerIntegrationTest {
+public class TripControllerInegrationTest {
 	
 	@Autowired
 	private MockMvc mockMVC; 
 	
+	private Trip trip; 
+	
+	private Trip savedTrip; 
+	
 	@Autowired
 	private ObjectMapper mapper; 
 	
-	private Journey journey; 
-	
-	private Journey savedJourney; 
-	
 	
 	@Before
-	public void init () {
-		this.journey = new Journey(1L, "gatwick", "cambodia", "plane", LocalDate.of(2021, 10, 15));
-		this.savedJourney = new Journey(journey.getId(), journey.getDepartureAirport(), journey.getDestinationAirport(), journey.getModeOfTravel(), journey.getDate());
-		this.savedJourney.setId(1L);
+	public void init() {
+		this.trip = new Trip(1L, "Stag");
+		this.savedTrip = new Trip(trip.getTripId(), trip.getTripName());
+		this.savedTrip.setTripId(1L);
 	}
 	
-	// creating mock request to create to see process
 	@Test
 	public void testCreate() throws Exception {
-		MockHttpServletRequestBuilder reqBuilder = MockMvcRequestBuilders.post("/createJourney");
+		MockHttpServletRequestBuilder reqBuilder = MockMvcRequestBuilders.post("/createTrip");
 		reqBuilder.contentType(MediaType.APPLICATION_JSON);
 		reqBuilder.accept(MediaType.APPLICATION_JSON);
-		reqBuilder.content(this.mapper.writeValueAsString(journey));
+		reqBuilder.content(this.mapper.writeValueAsString(trip));
 		
 		ResultMatcher matchStatus = MockMvcResultMatchers.status().isCreated();
-		ResultMatcher matchContent = MockMvcResultMatchers.content().json(this.mapper.writeValueAsString(savedJourney));	
-				
+		ResultMatcher matchContent = MockMvcResultMatchers.content().json(this.mapper.writeValueAsString(savedTrip));
+		
 		this.mockMVC.perform(reqBuilder).andExpect(matchStatus).andExpect(matchContent);
 	}
 	

@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.qa.hwa.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -20,7 +20,6 @@ import org.modelmapper.ModelMapper;
 import com.qa.hwa.dto.TripDTO;
 import com.qa.hwa.persistence.domain.Trip;
 import com.qa.hwa.persistence.repo.TripRepo;
-import com.qa.hwa.service.TripService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TripServiceUnitTest {

@@ -1,4 +1,4 @@
-package com.example.demo.rest;
+package com.qa.hwa.rest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -23,7 +23,6 @@ import org.springframework.http.ResponseEntity;
 
 import com.qa.hwa.dto.JourneyDTO;
 import com.qa.hwa.persistence.domain.Journey;
-import com.qa.hwa.rest.JourneyController;
 import com.qa.hwa.service.JourneyService;
 
 @RunWith(MockitoJUnitRunner.class)
