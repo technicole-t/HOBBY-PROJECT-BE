@@ -1,9 +1,5 @@
 package com.example.demo.rest;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 import java.time.LocalDate;
 
 import org.junit.Before;
@@ -22,8 +18,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.example.demo.persistence.domain.Journey;
-import com.example.demo.persistence.repo.JourneyRepo;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringRunner.class)
@@ -41,7 +35,6 @@ public class JourneyControllerIntegrationTest {
 	
 	private Journey savedJourney; 
 	
-	private JourneyRepo repo; 
 	
 	@Before
 	public void init () {
@@ -64,16 +57,6 @@ public class JourneyControllerIntegrationTest {
 		this.mockMVC.perform(reqBuilder).andExpect(matchStatus).andExpect(matchContent);
 	}
 	
-	
-	@Test
-	public void testReadOne() throws JsonProcessingException, Exception {
-		this.savedJourney = this.repo.save(this.journey);
-		
-		this.mockMVC
-			.perform(get("/getJourneyById/" + this.savedJourney.getId()).contentType(MediaType.APPLICATION_JSON)
-					.accept(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(journey)))
-			.andExpect(status().isOk()).andExpect(content().json(this.mapper.writeValueAsString(savedJourney)));
-	}
 	
 
 }
