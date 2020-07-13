@@ -30,23 +30,19 @@ private ModelMapper mapper;
 		return this.mapper.map(journey, JourneyDTO.class);
 	}
 	
-	// INSERT INTO journey VALUES (...);
 	public JourneyDTO create(Journey journey) {
 		Journey saved = this.repo.save(journey);
 		return this.mapToDTO(saved);
 	}
 	
-	// SELECT * FROM journey; 
 	public List<JourneyDTO> read() {
 		return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
 	}
 	
-	// SELECT * FROM journey WHERE id=; 
 	public JourneyDTO read(Long id) {
 		return this.mapToDTO(this.repo.findById(id).orElseThrow(JourneyNotFoundException::new));
 	}
 	
-	// UPDATE journey SET date = ..., destinationAirport = ...;
 	public JourneyDTO update(Journey journey, Long id) {
 		Journey toUpdate = this.repo.findById(id).orElseThrow((JourneyNotFoundException::new));
 		
@@ -58,7 +54,6 @@ private ModelMapper mapper;
 		return this.mapToDTO(this.repo.save(toUpdate));
 	}
 	
-	// DELETE FROM journey WHERE id =;
 	public boolean delete(Long id) {
 		if (!this.repo.existsById(id)) {
 			throw new JourneyNotFoundException();
@@ -66,5 +61,4 @@ private ModelMapper mapper;
 		this.repo.deleteById(id);
 		return this.repo.existsById(id);
 	}
-
 }
