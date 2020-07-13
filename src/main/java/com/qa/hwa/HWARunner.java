@@ -8,7 +8,5 @@ public class HWARunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HWARunner.class, args);
-	
 	}
-
 }
