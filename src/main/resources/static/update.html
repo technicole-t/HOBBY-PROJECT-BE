@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="index.html" id="nav-text">tripTRACK</a>
+        </nav>
+        
+        <h5>Change Your Journey</h5>
+
+        <form id="update-journey-form">
+            <div id="update-journey-form">
+            <div class="form-group">
+
+                <button class="btn btn-info" type="button" id="updatedJourney" onclick="seeJourneyValues();">See Journey</button>
+                <pre id="displayJourney1"></pre>
+
+              <label for="formGroupDepAirport">Departure Airport</label>
+              <input type="text" class="form-control" id="update-departure-airport" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="formGroupDestAirport">Destination Airport</label>
+              <input type="text" class="form-control" id="update-destination-airport" placeholder="">
+            </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputModeOfTravel">Mode of Travel</label>
+                  <input type="text" class="form-control" id="update-mode-of-travel" placeholder="">
+                </div> 
+                <div class="form-group col-md-6">
+                  <label for="inputDate">Date</label>
+                  <input type="date" class="form-control" data-date-format="yyyy-mm-dd" id="update-date-of-travel" placeholder="">
+                </div>
+                <button onclick="updateAJourney();">Update</button>
+              </div>
+              <button id="delete-button" type="button" onclick="deleteData();" >Delete</button> <br>
+                <br>
+                <a href="plan.html"> Back to Journeys</a>
+            </div>
+          </form>
+    
+        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/update.js"></script>
+    </body>
+</html>

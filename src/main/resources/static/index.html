@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="index.html" id="nav-text">tripTRACK</a>
+        </nav>
+  
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-6">Welcome to tripTRACK!</h1>
+              <p class="lead">A central place to plan and save your multi-journey trip itinerary.</p>
+              <div class="input-section">
+                <input type="text" id="user-input-trip-name" class="enter-trip-box">
+                <form action="index.html">
+                    <br>
+                    <button class="btn btn-info" id="start-planning-button" onclick="postTrip();">Add Trip</button>
+                </form>
+            </div>
+            <br>
+            </div>
+          </div>
+  
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-6" id="trips-title">Your Trips</h1>
+              <div class="see-all-trips">
+                <button class="btn btn-success" id="readAllTrips"> See Trips</button>
+             </div>
+            </div>
+            <br>
+            <pre id="tripOutput"> </pre>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

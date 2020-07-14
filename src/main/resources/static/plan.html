@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="index.html" id="nav-text">tripTRACK</a>
+        </nav>
+
+        <h4>Add a Journey </h4>
+        <form id="add-journey-form" >
+            <div id="enter-journey-form">
+            <div class="form-group">
+              <label for="formGroupDepAirport">Departure Airport</label>
+              <input type="text" class="form-control" id="departure-airport" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="formGroupDestAirport">Destination Airport</label>
+              <input type="text" class="form-control" id="destination-airport" placeholder="">
+            </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputModeOfTravel">Mode of Travel</label>
+                  <input type="text" class="form-control" id="mode-of-travel" placeholder="">
+                </div> 
+                <div class="form-group col-md-6">
+                  <label for="inputDate">Date</label>
+                  <input type="date" class="form-control" data-date-format="yyyy-mm-dd" id="date-of-travel" placeholder="">
+                </div>
+                <div class="addJourneyButton" id="addJourneyBtn">
+                    <button class="btn btn-info" type="button" onclick="createJourney();" id="addJourney"> Add Journey</button>
+              </div>
+              
+            </div>
+            <div>
+                <br> <br>
+                <h4> Your Journey's</h4>
+                <p>Click on a journey to edit or delete it.</p>
+                <button class="btn btn-success" type="button" id="getAllJourneys"> See Journeys</button>
+                <br>
+                <pre id="journeyOutput"> </pre>
+              </div>
+             
+            </div>
+          </form>
+          <br>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/plan.js"></script>
+    </body>
+</html>
