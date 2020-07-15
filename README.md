@@ -1,57 +1,84 @@
 Coverage: 80%
 
-# HWA Project
-One Paragraph of project description goes here
+# Hobby Web Application Project
+
+The HWA Project is the week 9 assessment for the Software Development training at QA Consultancy. The project brief was to create an OOP-based web application, with utilisation of supporting tools, methodologies, and technologies, that encapsulates all fundamental and practical modules covered during training.
+
+Specifically, you are required to create a full-stack web application following the Enterprise Architecture Model, using:
+
+· an application back-end developed using the language from your Programming Fundamentals module (e.g. Java)
+
+· a managed database hosted within the Cloud Provider examined during your Cloud Fundamentals module (e.g. MySQL in GCP)
+
+· a front-end developed using the language from your Front-End Web Technologies module (e.g. JavaScript)
 
 ### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-What things you need to install the software and how to install them
+
+To use this program you will need: 
+
+· Java SE 8 or later 
+· MySQL database, hosted on GCP.
+
+Currently the database is locally hosted through the application via the h2-console. To change this you would change the path in the 'application properties' files within the src/main/resources folder.
+
+· Eclipse IDE to run Spring Boot.
+· Apache Maven
+· VSCode for viewing front end HTML, CSS & JavaScript 
 
 ### Installing
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+To get a copy of this repository you will need to: 
 
-Give the example
-And repeat
-
-until finished
-End with an example of getting some data out of the system or using it for a little demo
+· Use the terminal to 'cd' into the location of your choice 
+· Then run the command 'git clone https://github.com/technicole-t/HOBBY-PROJECT-BE.git
+· Open the IDE
+· Right click in the file explorer 
+· Import the project into the IDE 
 
 ### Running the tests
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+
+When you have successfully imported the project into your IDE you will be able to run the tests. 
 
 ### Unit Tests
-Explain what these tests test, why and how to run them
+To run the JUnit tests, right click on the src/test/java folder and select 'run as -> JUnit Test Application'.
 
-Give an example
-### Integration Tests
-Explain what these tests test, why and how to run them
+To view the application test coverage in Spring Boot, you will need to go to the 'Help' tab -> 'Eclipse Marketplace' and search for eclemma and install.
 
-Give an example
-And coding style tests
-Explain what these tests test and why
+Once this is installed you can right click on src/test/java and select 'coverage as' -> '2 JUnit Test Application'.
 
-Give an example
 ### Deployment
-Add additional notes about how to deploy this on a live system
+To run the project you will need to open the terminal. 
 
-### Built With
-Maven - Dependency Management
-Versioning
-We use SemVer for versioning.
+· 'cd' into the location that you cloned the repository 
+· run the command 'mvm clean package' 
+· 'cd' into the target folder 
+· java -jar *NAME-OF-PROJECT*-jar-with-dependancies.jar
+
+
+### Technologies and Supporting Technologies 
+· Trello - Kanban
+· MySQL - Database Language
+· Spring Boot - Eclipse IDE 
+· GCP - Database Host
+· Maven - Dependency Management
+· SonarQube - Static Analysis Tool
+· Nexus - Artifact Repository
+· HTML, CSS & JavaScript - Front End Languages 
 
 ### Authors
-Chris Perrins - Initial work - christophperrins
+Nicole Thorley - @technicole-t
 
 ### License
 This project is licensed under the MIT license - see the LICENSE.md file for details
 
-For help in Choosing a license
-
 ### Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+
+This project would not have been possible without the following people: 
+
+· Software Development Learning Specialist - Jordan Harrison @JHarry444
+· Software Development Learning Specialist - Piers Barber @	PCMBarber
+· Software Development Learning Specialist - Chris Perrins @christophperrins
+
